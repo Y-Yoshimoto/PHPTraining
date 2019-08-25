@@ -1,0 +1,48 @@
+version: '3'
+services:
+    nginx:
+        image: nginx_custom
+        build: nginx_custom
+        restart: always
+        depends_on:
+              - phpap
+        ports:
+            - "80:80"
+            #- "443:443"
+        networks:
+            - default
+        #logging:
+        #    driver: "journald"
+
+    phpap:
+        image: php_custom
+        build: php_custom
+        restart: always
+        depends_on:
+            - mariadb
+        ports:
+            - "8080:8080"
+        networks:
+            - default
+        #logging:
+        #    driver: "journald"
+
+
+    mariadb:
+        image: mariadb_custom
+        build: mariadb_custom
+        ports:
+            - "3306:3306"
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: mysql
+            # MYSQL_DATABASE: zabbix
+        networks:
+            - default
+        #logging:
+        #    driver: "journald"
+            #options:
+            #    max-size: "50m"
+            #    max-file: "3"
+        # volumes:
+        #     - ./db_data:/var/lib/mysql

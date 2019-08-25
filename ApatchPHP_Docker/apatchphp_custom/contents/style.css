@@ -1,0 +1,43 @@
+@charset "UTF-8";
+body{
+    font-family: -apple-system, 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', '游ゴシック Medium', 'メイリオ', meiryo, sans-serif;
+	background-color: #EBEBEF;
+	padding-left: 70px;
+}
+ul{
+    margin-left: 35%;
+}
+li{
+    list-style: none;
+    text-align: left;
+}
+
+.phpClass {
+	/*文字*/
+	color: #004263;
+	text-align: center;
+}
+
+.logo{
+    margin: 0 auto;/*ブラウザの中央に配置*/
+    margin: 20px;
+    width: 10%;
+}
+
+.Linklist{
+    font-size: 20px;
+    color: #004263;
+}
+
+.inputC{
+    color: #004263;
+    background-color: #EAEAEA;
+    border:solid 1px #676733;
+}
+.inputC:focus{
+    border:solid 1px #EEA34A;
+}
+
+.button{
+    color:#004263;
+}

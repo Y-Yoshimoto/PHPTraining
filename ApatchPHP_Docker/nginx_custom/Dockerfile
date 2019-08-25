@@ -8,6 +8,9 @@ COPY contents/* /usr/share/nginx/html/
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY server.conf /etc/nginx/conf.d/server.conf
 
+# タイムゾーン設定
+RUN cp -fp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+
 # コンテナ実行時の動作設定
 EXPOSE 80
 ENTRYPOINT ["/usr/sbin/nginx", "-g", "daemon off;", "-c", "/etc/nginx/nginx.conf"]

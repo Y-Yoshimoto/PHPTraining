@@ -15,18 +15,21 @@ services:
         #    driver: "journald"
 
     phpap:
-        image: php_custom
-        build: php_custom
+        image: apatchphp_custom
+        build: apatchphp_custom
         restart: always
         depends_on:
             - mariadb
         ports:
-            - "8080:8080"
+            - "8080:80"
         networks:
             - default
+        environment:
+            TZ: Asia/Tokyo
         #logging:
         #    driver: "journald"
-
+        volumes:
+             - ./apatchphp_custom/contents/:/var/www/html/
 
     mariadb:
         image: mariadb_custom
@@ -36,7 +39,9 @@ services:
         restart: always
         environment:
             MYSQL_ROOT_PASSWORD: mysql
-            # MYSQL_DATABASE: zabbix
+            MYSQL_DATABASE: phpTraining
+            MYSQL_USER: phpUser
+            MYSQL_PASSWORD: phpPassword
         networks:
             - default
         #logging:

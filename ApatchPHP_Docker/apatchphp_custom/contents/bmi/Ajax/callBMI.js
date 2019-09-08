@@ -20,7 +20,11 @@ $(function(){
                 // 受信データ処理
                 console.log(rcv_data);
                 var bmi = rcv_data.bmi;
-                $("#message1").text(bmi);
+                var message1 = 'あなたのBMIは[' + rcv_data.bmi + ']です。';
+                $("#message1").text('あなたのBMIは[' + rcv_data.bmi.toFixed(2) + ']です。');
+                $("#message2").text('評価は[' +  rcv_data.status +  ']です。');
+                $('.boxOutput').css('background', rcv_data.color);
+                $("#buttonN").text('再送信');
         }).fail(function(rcv_data, textStatus, errorThrown){
                 // エラー処理
                 console.log(rcv_data);

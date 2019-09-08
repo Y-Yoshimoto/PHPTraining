@@ -13,7 +13,7 @@
             <?php
             //BMI計算
             //$BMIresult = bmiCheck(bmiCal($_POST['tall'],$_POST['weight']));
-            $BMIresult = bmiCheck(filter_input(INPUT_POST,'tall'),filter_input(INPUT_POST,'weight'));
+            $BMIresult = bmiCheck(bmiCal(filter_input(INPUT_POST,'tall'),filter_input(INPUT_POST,'weight')));
             //結果出力
             echo '<div class="boxOutput" style="background:',$BMIresult['color'],'">';
                 echo '<p>あなたのBMIは[',$BMIresult['bmi'],']です。</p>';

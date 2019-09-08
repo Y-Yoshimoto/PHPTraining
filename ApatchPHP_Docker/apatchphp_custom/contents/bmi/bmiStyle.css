@@ -41,6 +41,9 @@ h2{
 .boxOutput {
     background: #e4fcff;/*背景色*/
 }
+.boxOutput p{
+    color: #0F0F0F;
+}
 
 .buttonC{
     display: inline-block;

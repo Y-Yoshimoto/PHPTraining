@@ -10,11 +10,13 @@
     <body>
         <h1>BMIチェッカー</h1>
         <div class="boxSheet">
-            <div class="boxOutput">
-                <?php
-                $bmi = bmiCal($_POST['tall'],$_POST['weight']);
-                echo '<p>あなたのBMIは',$bmi,'です。</p>';
-                $status = bmiCheck($bmi);
+            <?php
+            //BMI計算
+            $BMIresult = bmiCheck(bmiCal($_POST['tall'],$_POST['weight']));
+            //結果出力
+            echo '<div class="boxOutput" style="background:',$BMIresult['color'],'">';
+                echo '<p>あなたのBMIは[',$BMIresult['bmi'],']です。</p>';
+                echo '<p>評価は[',$BMIresult['status'], ']です。</p>';
                 ?>
                 <input class="buttonC" type="button" value="戻る" onclick="history.back()">
             </div>
@@ -37,11 +39,18 @@ function bmiCheck($bmi){
     foreach ($BMIdata["Info"] as &$Info) {
         //echo 'bmiUpperLimit',$Info["bmiUpperLimit"],'<br>';
         if($bmi < $Info["bmiUpperLimit"]){
-            echo "<p>評価は「",$Info["status"],"」です。</p>";
-            return 0;
+            $result = array("bmi" => $bmi,
+            "color" => $Info["color"] ,
+            "text" => $Info["text"],
+            "status" => $Info["status"]) ;
+            //var_dump($result);
+            return $result;
         };
     };
-    echo '異常値です。<br>';
-    return 0;
+    $result = array("bmi" => $bmi,
+    "color" => "FFFFFF",
+    "text" => "異常値です",
+    "status" => "異常値") ;
+    return $result;
 }
 ?>

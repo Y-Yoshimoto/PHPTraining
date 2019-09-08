@@ -1,0 +1,51 @@
+{
+    "Info":[
+    {
+        "bmiUpperLimit": "16.00",
+        "status": "痩せすぎ",
+        "color": "#7c7cbc",
+        "text": "痩せすぎです。"
+    },
+    {
+        "bmiUpperLimit": "17.00",
+        "status": "痩せ",
+        "color": "#7c7cfc",
+        "text": "痩せてます。"
+    },
+    {
+        "bmiUpperLimit": "18.50",
+        "status": "痩せぎみ",
+        "color": "#7cfcfc",
+        "text": "痩せぎみです。"
+    },
+    {
+        "bmiUpperLimit": "25.00",
+        "status": "普通体重",
+        "color": "#7cfc7c",
+        "text": "普通です。"
+    },
+    {
+        "bmiUpperLimit": "30.00",
+        "status": "前肥満",
+        "color": "#fcfc7c",
+        "text": "前肥満です。"
+    },
+    {
+        "bmiUpperLimit": "35.00",
+        "status": "肥満(1度)",
+        "color": "#fcbb91",
+        "text": "肥満(1度)です。"
+    },
+    {
+        "bmiUpperLimit": "40.00",
+        "status": "肥満(2度)",
+        "color": "#fc9191",
+        "text": "肥満(2度)です。"
+    },
+    {
+        "bmiUpperLimit": "9999.00",
+        "status": "肥満(3度)",
+        "color": "#c08080",
+        "text": "肥満(3度)です。"
+    }]
+}

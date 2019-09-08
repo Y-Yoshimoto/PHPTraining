@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="jp" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-            <!--<link rel="stylesheet" type="text/css" href=".../style.css">*-->
-        <title>BMIチェッカー</title>
-        <link rel=”icon” type=”image/png” href=”../img/Favicon.png”>
-    </head>
-    <!--Body-->
-    <form action="price_output.php" method="post">
-        <h1>BMIチェッカー</h1>
-        <h2>あなたの身長と体重を入力してください</h2>
-        <div>
-            <p>身長</p><input class="inputC" type="text" name="tall">cm
-            <p>体重</p><input class="inputC" type="text" name="weight">kg
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../bmiStyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>BMIチェッカー</title>
+    <link rel=”icon” type=”image/x-icon” href=”../img/Favicon.icon”>
+</head>
+<body>
+    <h1>BMIチェッカー</h1>
+    <div class="boxSheet">
+        <div class="boxInput">
+            <form action="bmiResult.php" method="post">
+                <p>身長と体重を入力してください</p>
+                <p>身長<br><input class="inputC" type="text" name="tall">cm</p>
+                <p>体重<br><input class="inputC" type="text" name="weight">kg</p>
+                <button class="buttonC" type="submit" value="送信">送信</button>
+            </form>
         </div>
-        <div>
-            <input class="buttonC" type="submit" value="送信">
-        </div>
-    <body>
-    </body>
+    </div>
+
+<body>
+</body>
+
 </html>

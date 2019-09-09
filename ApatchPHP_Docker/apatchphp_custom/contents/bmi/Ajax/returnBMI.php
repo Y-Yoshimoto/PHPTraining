@@ -24,7 +24,7 @@
     //BIM情報読み込み,デコード
     $BMIdata = json_decode(file_get_contents("../BMIdata.json"), true);
     foreach ($BMIdata["Info"] as &$Info) {
-        //BMI判定, レスポンス生成
+    //BMI判定, レスポンス生成
         if($bmi < $Info["bmiUpperLimit"]){
             return makeInfo($bmi, $Info["color"], $Info["text"], $Info["status"]);
         };

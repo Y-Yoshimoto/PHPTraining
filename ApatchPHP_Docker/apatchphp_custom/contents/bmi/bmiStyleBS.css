@@ -1,0 +1,57 @@
+body{
+    font-family: -apple-system, 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', '游ゴシック Medium', 'メイリオ', meiryo, sans-serif;
+	/*background-color: #FAFAFA;*/
+    background-color: #454545;
+    color: #F0F0F0;
+	/*padding-left: 20%;*/
+}
+
+h1{
+    padding-left: 25%;
+    /*color: #93D6A4;*/
+}
+h2{
+    padding-left: 28%;
+    /*color: #93D6A4;*/
+}
+/*枠ボックス*/
+.boxSheet{
+    /*ブラウザの中央に配置*/
+    margin: 0 auto;
+    width: 40%;
+    /*padding: 0.5em 0.5em;*/
+    padding: 10px 10px 10px 10px;
+    background: #e4fcff;/*背景色*/
+    border-top: solid 20px #1dc1d6;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+    /*文字*/
+    /*padding-left: 40%;*/
+}
+.boxSheet p{
+    font-size: 20px;
+    color: #004263;
+    margin: 0px 0px 5px 10px;
+    padding: 5px 10px 10px 10px;
+}
+/*入力用BOX*/
+.boxInput {
+    display: inline-block;
+    background: #e4fcff;/*背景色*/
+}
+/*出力用BOX*/
+.boxOutput {
+    background: #e4fcff;/*背景色*/
+}
+.boxOutput p{
+    color: #0F0F0F;
+}
+
+.buttonC{
+    padding: 0.2em 1em;
+    margin: 1px 10px 10px 160px;
+}
+
+.inputC{
+    display: inline;
+    width:150px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="jp" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <!-- Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--CSS -->
+    <link rel="stylesheet" type="text/css" href="../bmiStyleBS.css">
+    <!--Parameter -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BMIチェッカー</title>
+    <!--<link rel=”icon” type=”image/x-icon” href=”../img/Favicon.icon”>-->
+</head>
+
+<body>
+    <h1>BMIチェッカーB</h1>
+    <div class="boxSheet">
+        <div class="boxInput">
+            <form method="post">
+                <p>身長と体重を入力してください</p>
+                <p>身長<br><input class="form-control inputC" type="text" id="tall" name="tall"> cm</p>
+                <p>体重<br><input class="form-control inputC" type="text" id="weight" name="weight"> kg</p>
+                <button class="btn-primary buttonC" id="callBMI" type="submit" value="送信"><div id="buttonN">送信</div></button>
+            </form>
+        </div>
+        <div class="boxOutput">
+            <p id="message1"></p>
+            <p id="message2"></p>
+        </div>
+    </div>
+
+    <!--jquery, Bootstrap, popper -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--JavaScript -->
+    <script src="./callBMI.js"></script>
+</body>
+
+</html>

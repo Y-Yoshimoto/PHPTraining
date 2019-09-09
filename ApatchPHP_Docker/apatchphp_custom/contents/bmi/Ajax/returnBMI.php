@@ -21,24 +21,24 @@
             $tallm = $tall*0.01;
             return $weight/($tallm*$tallm);
     }
+    
     function bmiCheck($bmi){
     //BIM情報読み込み,デコード
     $BMIdata = json_decode(file_get_contents("../BMIdata.json"), true);
     foreach ($BMIdata["Info"] as &$Info) {
         //echo 'bmiUpperLimit',$Info["bmiUpperLimit"],'<br>';
         if($bmi < $Info["bmiUpperLimit"]){
-            $result = array("bmi" => $bmi,
-            "color" => $Info["color"] ,
-            "text" => $Info["text"],
-            "status" => $Info["status"]) ;
-            //var_dump($result);
-            return $result;
+            return makeInfo($bmi, $Info["color"], $Info["text"], $Info["status"]);
         };
     };
-    $result = array("bmi" => $bmi,
-    "color" => "FFFFFF",
-    "text" => "異常値です",
-    "status" => "異常値") ;
-    return $result;
-}
+    return makeInfo($bmi, "#FFFFFF", "異常値です", "異常値");
+    }
+
+    function makeInfo($bmi, $color, $text, $status){
+        $result = array("bmi" => $bmi,
+        "color" => $color,
+        "text" => $text,
+        "status" => $status) ;
+        return $result;
+    }
 ?>
